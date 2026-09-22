@@ -1,0 +1,56 @@
+{
+  "name": "spacebook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:reset": "prisma migrate reset --force",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:seed": "tsx prisma/seed.ts",
+    "setup": "prisma migrate dev --name init && tsx prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "3.9.0",
+    "@prisma/client": "5.18.0",
+    "@radix-ui/react-dialog": "1.1.1",
+    "@radix-ui/react-label": "2.1.0",
+    "@radix-ui/react-select": "2.1.1",
+    "@radix-ui/react-slot": "1.1.0",
+    "@radix-ui/react-tooltip": "^1.2.16",
+    "@react-email/components": "0.0.21",
+    "bcryptjs": "2.4.3",
+    "class-variance-authority": "0.7.0",
+    "clsx": "2.1.1",
+    "date-fns": "3.6.0",
+    "lucide-react": "0.427.0",
+    "next": "14.2.5",
+    "next-themes": "0.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.52.1",
+    "resend": "3.5.0",
+    "tailwind-merge": "2.4.0",
+    "vaul": "^1.1.2",
+    "zod": "3.23.8",
+    "zustand": "4.5.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "8.4.1",
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "20.14.15",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.41",
+    "prisma": "5.18.0",
+    "tailwindcss": "3.4.9",
+    "tsx": "4.16.5",
+    "typescript": "5.5.4"
+  }
+}

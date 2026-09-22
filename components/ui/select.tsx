@@ -1,0 +1,22 @@
+"use client";
+import * as React from "react";
+import { cn } from "@/lib/utils";
+
+// A native <select> styled to match — kept deliberately simple over
+// Radix Select to save build time; swap for @radix-ui/react-select
+// primitives if you want full custom styling/animations.
+const Select = React.forwardRef<HTMLSelectElement, React.SelectHTMLAttributes<HTMLSelectElement>>(
+  ({ className, ...props }, ref) => (
+    <select
+      ref={ref}
+      className={cn(
+        "h-9 w-full rounded-md border border-border bg-background px-3 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+Select.displayName = "Select";
+
+export { Select };
